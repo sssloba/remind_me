@@ -14,6 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Remind me App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: const TextTheme(
+          /// [labelLarge] style for Button's text
+          labelLarge: TextStyle(fontSize: 32),
+        ),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -34,9 +38,12 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Remind me App'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'Remind me Home',
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {},
+          child: const Text(
+            'Remind me',
+          ),
         ),
       ),
     );
