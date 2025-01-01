@@ -44,7 +44,7 @@ app.*.map.json
 /android/app/release
 
 # App related
-lib/congif/config.dart
+lib/config/config.dart
 android/app/google-services.json
 pubspec.lock
 ios/firebase_app_id_file.json

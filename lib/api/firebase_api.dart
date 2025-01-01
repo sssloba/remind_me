@@ -1,7 +1,8 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/foundation.dart';
-import 'package:remind_me/congif/config.dart';
+import 'package:remind_me/config/config.dart';
 
+/// [handleBackgroundMessage] must be top-level function
 Future<void> handleBackgroundMessage(RemoteMessage message) async {
   debugPrint('Title : ${message.notification?.title}');
   debugPrint('Body: ${message.notification?.body}');
@@ -9,11 +10,11 @@ Future<void> handleBackgroundMessage(RemoteMessage message) async {
 }
 
 class FirebaseApi {
-  final FirebaseMessaging _firebaseMessagin = FirebaseMessaging.instance;
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
 
   Future<void> initNotification() async {
-    await _firebaseMessagin.requestPermission();
-    Config.fcmToken = await _firebaseMessagin.getToken();
+    await _firebaseMessaging.requestPermission();
+    Config.fcmToken = await _firebaseMessaging.getToken();
     debugPrint('Token: ${Config.fcmToken}');
     FirebaseMessaging.onBackgroundMessage(handleBackgroundMessage);
   }
