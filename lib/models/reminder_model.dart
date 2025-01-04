@@ -14,4 +14,34 @@ class ReminderModel {
     required this.reminderTime,
     this.name,
   });
+
+  List<ReminderModel> get mockReminderList => <ReminderModel>[
+        ReminderModel(
+          id: 'Mock1',
+          title: 'Mock 1 Reminder Title',
+          text: 'This is Mock 1 Reminder Text',
+          reminderTime: DateTime.now().add(
+            const Duration(hours: 1),
+          ),
+          name: 'mock_1_reminder',
+        ),
+        ReminderModel(
+          id: 'Mock2',
+          title: 'Mock 2 Reminder Title',
+          text: 'This is Mock 2 Reminder Text',
+          reminderTime: DateTime.now().add(
+            const Duration(hours: 2),
+          ),
+          name: 'mock_2_reminder',
+        ),
+        ReminderModel(
+          id: 'Mock3',
+          title: 'Mock 3 Reminder Title',
+          text: 'This is Mock 3 Reminder Text',
+          reminderTime: DateTime.now().add(
+            const Duration(hours: 3),
+          ),
+          name: 'mock_3_reminder',
+        ),
+      ];
 }
