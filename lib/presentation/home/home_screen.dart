@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:remind_me/models/reminder_model.dart';
+import 'package:remind_me/presentation/reminders/reminders_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -12,7 +14,13 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => RemindersScreen(reminders: ReminderModel.mockReminderList),
+                  ),
+                );
+              },
               child: const Text(
                 'Reminder List',
                 style: TextStyle(color: Colors.red),

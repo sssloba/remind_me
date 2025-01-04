@@ -34,9 +34,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomeScreen(),
-      // home: RemindersScreen(
-      //   reminders: ReminderModel.mockReminderList,
-      // ),
     );
   }
 }
