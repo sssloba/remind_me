@@ -2,7 +2,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:remind_me/api/firebase_api.dart';
 import 'package:remind_me/firebase_options.dart';
+import 'package:remind_me/models/reminder_model.dart';
 import 'package:remind_me/presentation/home/home_screen.dart';
+import 'package:remind_me/presentation/reminders/reminders_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const HomeScreen(),
+      // home: RemindersScreen(
+      //   reminders: ReminderModel.mockReminderList,
+      // ),
     );
   }
 }

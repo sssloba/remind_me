@@ -15,7 +15,7 @@ class ReminderModel {
     this.name,
   });
 
-  List<ReminderModel> get mockReminderList => <ReminderModel>[
+  static List<ReminderModel> get mockReminderList => <ReminderModel>[
         ReminderModel(
           id: 'Mock1',
           title: 'Mock 1 Reminder Title',
