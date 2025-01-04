@@ -23,6 +23,10 @@ class MyApp extends StatelessWidget {
       title: 'Remind me App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          centerTitle: true,
+        ),
         textTheme: const TextTheme(
           /// [labelLarge] style for Button's text
           labelLarge: TextStyle(fontSize: 32),
