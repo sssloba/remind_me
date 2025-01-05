@@ -15,10 +15,8 @@ class HomeScreen extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => RemindersScreen(reminders: ReminderModel.mockReminderList),
-                  ),
+                Navigator.of(context).pushNamed(
+                  RemindersScreen.route,
                 );
               },
               child: const Text(

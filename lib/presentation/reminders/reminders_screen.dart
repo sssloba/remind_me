@@ -9,6 +9,8 @@ class RemindersScreen extends StatelessWidget {
 
   final List<ReminderModel> reminders;
 
+  static const route = '/reminders-screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

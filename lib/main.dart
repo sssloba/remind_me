@@ -6,6 +6,8 @@ import 'package:remind_me/models/reminder_model.dart';
 import 'package:remind_me/presentation/home/home_screen.dart';
 import 'package:remind_me/presentation/reminders/reminders_screen.dart';
 
+final navigatorKey = GlobalKey<NavigatorState>();
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -33,7 +35,13 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
+      navigatorKey: navigatorKey,
       home: const HomeScreen(),
+      routes: {
+        RemindersScreen.route: (context) => RemindersScreen(
+              reminders: ReminderModel.mockReminderList,
+            ),
+      },
     );
   }
 }
