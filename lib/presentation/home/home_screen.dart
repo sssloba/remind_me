@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:remind_me/models/reminder_model.dart';
 import 'package:remind_me/presentation/reminders/reminders_screen.dart';
 
 class HomeScreen extends StatelessWidget {
