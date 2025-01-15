@@ -14,7 +14,7 @@ class RemindersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final message = ModalRoute.of(context)!.settings.arguments;
-    print(message);
+    debugPrint(message.toString());
     return Scaffold(
       appBar: AppBar(
         title: const Text('Reminder List'),
